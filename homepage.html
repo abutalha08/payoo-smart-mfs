@@ -38,16 +38,16 @@
 
   <body class="min-h-screen max-w-md bg-base-200 mx-auto">
     <!-- HomePage header  -->
-    <header class="border-b-2 border-gray-300">
+    <header class="border-b-2 border-gray-300 sticky top-0 bg-base-200 z-10">
       <section
-        class="w-11/12 mx-auto py-3 border-2 border-red-700 flex justify-between items-center"
+        class="w-11/12 mx-auto py-3  flex justify-between items-center"
       >
         <div class="left flex gap-1">
           <div class="logo w-[60px]">
             <img src="./assets/logo.png" alt="" />
           </div>
           <div class="balance-info">
-            <h2 class="text-2xl font-bold">$<span id="balance">45000</span></h2>
+            <h2 class="text-2xl font-bold">$<span id="current-balance">45000</span></h2>
             <p class="text-neutral/50">Available Balance</p>
           </div>
         </div>
@@ -117,30 +117,32 @@
             <br />
             <label class="label font-bold text-neutral">Amount</label>
             <input
-              id="cashout-number"
+              id="cashout-amount"
               maxlength="11"
               minlength="11"
               type="number"
               class="input rounded-full bg-base-200 w-full"
               placeholder="Enter amount to withdraw"
-              value="01234567890"
+              value="10000"
             />
             <br />
             <label class="label font-bold text-neutral">Pin Number</label>
             <input
-              id="cashout-pin-number"
+              id="cashout-pin"
               type="password"
               maxlength="4"
               class="input rounded-full bg-base-200 w-full"
               placeholder="Enter 4 digit pin number"
             />
 
-            <button id="login-btn" class="btn btn-primary mt-4 rounded-full">
+            <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full">
               Withdraw Money
             </button>
           </fieldset>
         </div>
       </div>
     </section>
+
+    <script src="./script.js/cashout.js"></script>
   </body>
 </html>
