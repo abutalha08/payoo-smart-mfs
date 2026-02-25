@@ -13,11 +13,11 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
   // console.log(cashoutAmount);
 
   // 3.Get the Current balance
-//   const CurrentBalanceInput = document.getElementById("current-balance");
-//   const CurrentBalance = CurrentBalanceInput.innerText;
-//   console.log(CurrentBalance);
+  //   const CurrentBalanceInput = document.getElementById("current-balance");
+  //   const CurrentBalance = CurrentBalanceInput.innerText;
+  //   console.log(CurrentBalance);
 
-const CurrentBalance = getBalance();
+  const CurrentBalance = getBalance();
 
   //4.Calculate the new balance
   const newBalance = CurrentBalance - Number(cashoutAmount);
