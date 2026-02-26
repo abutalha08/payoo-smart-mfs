@@ -36,6 +36,23 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     //1option-CurrentBalanceInput.innerText = newBalance;
     //2option- document.getElementById('current-balance').innerText = newBalance;
     setBalance(newBalance);
+
+    // 1.History container k dhore niye ashbo
+    const history = document.getElementById("history-container");
+
+    //2.New div create korbo
+    const newHistory = document.createElement("div");
+
+    // 3.New div e innerHTML add korbo
+    newHistory.innerHTML = `
+    <div class="transaction-card p-5 bg-base-100">
+    Cashout ${cashoutAmount} TAKA Success to ${AgentNumber}, at ${new Date()}
+
+          
+        </div>
+        `;
+    // 4.history container e new div append korbo
+    history.append(newHistory);
   } else {
     //5.2 if false :: show an error alert > return
     alert("Invalid pin");
