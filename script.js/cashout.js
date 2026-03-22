@@ -12,20 +12,20 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
   const cashoutAmount = getValueFromInput("cashout-amount");
   // console.log(cashoutAmount);
 
-
+ // 3 validation add 
   if (!cashoutAmount || Number(cashoutAmount) <= 0) {
   alert("Invalid Amount");
   return;
 }
 
-  // 3.Get the Current balance
+  // 4.Get the Current balance
   //   const CurrentBalanceInput = document.getElementById("current-balance");
   //   const CurrentBalance = CurrentBalanceInput.innerText;
   //   console.log(CurrentBalance);
 
   const CurrentBalance = getBalance();
 
-  //4.Calculate the new balance
+  //5.Calculate the new balance
   const newBalance = CurrentBalance - Number(cashoutAmount);
   // console.log('New balance',newBalance);
   if (newBalance < 0) {
@@ -33,10 +33,10 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     return;
   }
 
-  //5.Get the pin and verify
+  //6.Get the pin and verify
   const cashoutPin = getValueFromInput("cashout-pin");
   if (cashoutPin == "1234") {
-    //5.1 if true :: show an alert > set balance
+    //6.1 if true :: show an alert > set balance
     alert("Cashout Successful");
     // console.log("New Balance",newBalance);
     //1option-CurrentBalanceInput.innerText = newBalance;
@@ -60,7 +60,7 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
     // 4.history container e new div append korbo
     history.append(newHistory);
   } else {
-    //5.2 if false :: show an error alert > return
+    //6.2 if false :: show an error alert > return
     alert("Invalid pin");
     return;
   }
