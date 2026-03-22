@@ -17,6 +17,7 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
   const addAmount = getValueFromInput("add-money-amount");
   console.log(addAmount);
 
+
   if (addAmount <= 0) {
     alert("Invalid amount");
     return;
@@ -25,12 +26,12 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
   // 4. Get current Balance
   const CurrentBalance = getBalance();
 
-  // 4.Calculate total balance
+  // 5.Calculate total balance
 
   const totalNewBalance = Number(addAmount) + CurrentBalance;
   setBalance(totalNewBalance);
 
-  // 5. get pin and verify
+  // 6. get pin and verify
   const addMoneyPin = getValueFromInput("add-money-pin");
   if (addMoneyPin == "1234") {
     alert(`Add Money Success from ${bankAccount} at ${new Date()}`);
