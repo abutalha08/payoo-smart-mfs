@@ -22,39 +22,93 @@
       referrerpolicy="no-referrer"
     />
     <!-- Google Fonts  -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-<style>
-    *{
+    <style>
+      * {
         font-family: "Outfit", sans-serif;
-        
-    }
-</style>
+      }
+    </style>
   </head>
 
   <body class="min-h-screen max-w-md bg-base-200 mx-auto">
     <!-- Logo  -->
     <div class="logo w-[200px] mx-auto pt-32">
-        <img src="./assets/Logo-full.png" alt="">
+      <img src="./assets/Logo-full.png" alt="" />
     </div>
 
     <!-- Login Form  -->
     <div class="form pt-10">
-        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto rounded-2xl">
-      <div class="card-body">
-        <fieldset class="fieldset">
-          <label class="label font-bold text-neutral">Mobile Number</label>
-          <input id="input-mobile-number" maxlength="11" minlength="11" type="text" class="input rounded-full bg-base-200" placeholder="Enter your 11 digit number" value="01234567890" />
-          <br>
-          <label class="label font-bold text-neutral">4 Digit Pin</label>
-          <input id="input-pin-number" type="password" maxlength="4" class="input rounded-full bg-base-200" placeholder="Password" />
-          
-          <button id="login-btn" class="btn btn-primary mt-4 rounded-full">Login</button>
-        </fieldset>
+      <div
+        class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto rounded-2xl"
+      >
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label font-bold text-neutral">Mobile Number</label>
+            <input
+              id="input-mobile-number"
+              maxlength="11"
+              minlength="11"
+              type="text"
+              class="input rounded-full bg-base-200"
+              placeholder="Enter your 11 digit number"
+            />
+            <p class="font-normal text-[14px] text-[#4A00FF]">
+              Default Number: 01234567890
+            </p>
+            <br />
+            <label class="label font-bold text-neutral">4 Digit Pin</label>
+            <input
+              id="input-pin-number"
+              type="password"
+              maxlength="4"
+              class="input rounded-full bg-base-200"
+              placeholder="Password"
+            />
+            <p class="font-normal text-[14px] text-[#4A00FF]">
+              Default Pin: 1234
+            </p>
+
+            <button id="login-btn" class="btn btn-primary mt-4 rounded-full">
+              Login
+            </button>
+          </fieldset>
+        </div>
       </div>
-    </div>
+
+      <!-- Horizontal Line  -->
+      <div class="flex items-center my-4">
+        <hr class="grow border-[#E4E4E7] mx-2" />
+        <span class="px-2 font-normal text-[16px] text-[#1F2937]">OR</span>
+        <hr class="grow border-[#E4E4E7] mx-2" />
+      </div>
+
+      <!-- Demo Credentials  -->
+      <div>
+        <p class="font-normal text-[14px] text-[#64748B] text-center">
+          Demo Credentials:
+        </p>
+      </div>
+
+      <div class="text-center bg-[#F8FAFC] p-7 m-4 rounded">
+        <p>
+          <span class="font-semibold text-[16px] text-[#1F2937]"
+            >Default Number:</span
+          >
+          01234567890
+        </p>
+        <p>
+          <span class="font-semibold text-[16px] text-[#1F2937]"
+            >Default Pin:</span
+          >
+          1234
+        </p>
+      </div>
     </div>
     <script src="./script.js/login.js"></script>
   </body>
