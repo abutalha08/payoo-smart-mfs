@@ -12,6 +12,12 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
   const cashoutAmount = getValueFromInput("cashout-amount");
   // console.log(cashoutAmount);
 
+
+  if (!cashoutAmount || Number(cashoutAmount) <= 0) {
+  alert("Invalid Amount");
+  return;
+}
+
   // 3.Get the Current balance
   //   const CurrentBalanceInput = document.getElementById("current-balance");
   //   const CurrentBalance = CurrentBalanceInput.innerText;
@@ -23,7 +29,7 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
   const newBalance = CurrentBalance - Number(cashoutAmount);
   // console.log('New balance',newBalance);
   if (newBalance < 0) {
-    alert("Invalid Amount");
+    alert("Insufficient Amount");
     return;
   }
 
