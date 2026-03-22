@@ -27,6 +27,7 @@ function showOnly(id) {
   const addMoney = document.getElementById("add-money");
   const cashOut = document.getElementById("cashOut");
   const history = document.getElementById("history");
+  const transfer = document.getElementById("transferMoney");
 
   // console.log(`Add money- ${addMoney}, Cashout- ${cashOut}`);
 
@@ -34,6 +35,7 @@ function showOnly(id) {
   addMoney.classList.add("hidden");
   cashOut.classList.add("hidden");
   history.classList.add("hidden");
+  transfer.classList.add("hidden");
 
   // id wala element ta k show koro
   const selected = document.getElementById(id);
