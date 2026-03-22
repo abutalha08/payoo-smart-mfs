@@ -29,6 +29,8 @@ function showOnly(id) {
   const history = document.getElementById("history");
   const transfer = document.getElementById("transferMoney");
   const payBill = document.getElementById("pay-bill");
+  const getBonus = document.getElementById("getBonus");
+  
 
   // console.log(`Add money- ${addMoney}, Cashout- ${cashOut}`);
 
@@ -38,6 +40,7 @@ function showOnly(id) {
   history.classList.add("hidden");
   transfer.classList.add("hidden");
   payBill.classList.add("hidden");
+  getBonus.classList.add("hidden");
 
   // id wala element ta k show koro
   const selected = document.getElementById(id);
